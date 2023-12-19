@@ -74,13 +74,21 @@ pnpm run serve --filter . --parallel --recursive # --recursive表示递归安装
 - esbuild 1.0 还没发布，配置文件还没支持(也可以搭配`execa`,全命令行传入)，简单说不好用（高情商，低情商：不会）
 
 ```bash
-pnpm install rollup -D -w
-pnpm install @rollup/plugin-commonjs --save-dev -w  # 用于将CommonJS模块转换为 ES2015 供 Rollup 处理
-pnpm install @rollup/plugin-node-resolve --save-dev -w # 用于将第三方模块从 node_modules 中加载
+pnpm install rollup -Dw
+pnpm install @rollup/plugin-commonjs -Dw  # 用于将CommonJS模块转换为 ES2015 供 Rollup 处理
+pnpm install @rollup/plugin-node-resolve -Dw # 用于将第三方模块从 node_modules 中加载
+pnpm install @rollup/plugin-typescript2 -Dw # 用于将TypeScript转换为JavaScript
+pnpm install @rollup/plugin-terser -Dw # 用于压缩代码
+pnpm install @rollup/plugin-json -Dw # 用于加载json文件
+pnpm install @rollup/plugin-alias -Dw # 用于配置别名
 ```
+
+### 7. 规范
+
+#### 7.1 格式化规范（eslint）
 
 ## TODO
 
 - 编译子项目（esbuild or rollup）
-- 代码规范(试试新的 oxlint)
+- 规范(试试新的 oxlint,不知道怎么用，abandoned)
 - 单元测试
