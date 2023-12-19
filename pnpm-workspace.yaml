@@ -1,0 +1,2 @@
+packages: # 此名称必须为packages，下面的值为对应路径数组
+  - 'packages/*' 
